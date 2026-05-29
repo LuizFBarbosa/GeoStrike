@@ -78,6 +78,7 @@ const THEMES = [
 
 // ─── LOCATIONS (25 cidades) ────────────────────────────────────
 const LOCATIONS = [
+  {lat: -18.88723, lon: -48.25277, hint: 'Maior Cidade do Interior', country: 'Brasil', city: 'Uberlândia' },
   {lat:-23.5505,lon:-46.6333,hint:'Maior cidade da América do Sul',country:'Brasil',city:'São Paulo'},
   {lat:-22.9068,lon:-43.1729,hint:'Cidade Maravilhosa, famosa pelo Carnaval',country:'Brasil',city:'Rio de Janeiro'},
   {lat:-12.9714,lon:-38.5014,hint:'Cidade histórica do Pelourinho',country:'Brasil',city:'Salvador'},
