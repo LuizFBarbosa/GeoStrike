@@ -1,0 +1,966 @@
+[
+  {
+    "phase": 3,
+    "theme": "Survival Horror",
+    "city": "São Paulo",
+    "country": "Brasil",
+    "centerLatLon": {
+      "lat": -23.5505,
+      "lon": -46.6333
+    },
+    "centerGmaps": "https://www.google.com/maps?q=-23.5505,-46.6333",
+    "playerSpawn": {
+      "world": {
+        "x": -41.83012792692144,
+        "z": -35.23956118047325
+      },
+      "latlon": {
+        "lat": -23.550183,
+        "lon": -46.63371
+      },
+      "gmapsUrl": "https://www.google.com/maps?q=-23.550183,-46.63371"
+    },
+    "missionItems": [
+      {
+        "id": "mi_0",
+        "type": "crystal",
+        "world": {
+          "x": 28.3,
+          "z": 22.7
+        },
+        "latlon": {
+          "lat": -23.550703,
+          "lon": -46.633023
+        },
+        "gmapsUrl": "https://www.google.com/maps?q=-23.550703,-46.633023"
+      },
+      {
+        "id": "mi_1",
+        "type": "crystal",
+        "world": {
+          "x": -15.6,
+          "z": 51.7
+        },
+        "latlon": {
+          "lat": -23.550965,
+          "lon": -46.633453
+        },
+        "gmapsUrl": "https://www.google.com/maps?q=-23.550965,-46.633453"
+      },
+      {
+        "id": "mi_2",
+        "type": "crystal",
+        "world": {
+          "x": -34.4,
+          "z": -3.3
+        },
+        "latlon": {
+          "lat": -23.550471,
+          "lon": -46.633637
+        },
+        "gmapsUrl": "https://www.google.com/maps?q=-23.550471,-46.633637"
+      },
+      {
+        "id": "mi_3",
+        "type": "crystal",
+        "world": {
+          "x": 8.8,
+          "z": -37.1
+        },
+        "latlon": {
+          "lat": -23.550167,
+          "lon": -46.633214
+        },
+        "gmapsUrl": "https://www.google.com/maps?q=-23.550167,-46.633214"
+      }
+    ],
+    "bonusItems": [
+      {
+        "id": "bi_0",
+        "type": "medkit",
+        "world": {
+          "x": 28.3,
+          "z": 22.4
+        },
+        "latlon": {
+          "lat": -23.550701,
+          "lon": -46.633023
+        }
+      },
+      {
+        "id": "bi_1",
+        "type": "weapon_part",
+        "world": {
+          "x": 8,
+          "z": -11.9
+        },
+        "latlon": {
+          "lat": -23.550393,
+          "lon": -46.633221
+        }
+      },
+      {
+        "id": "bi_2",
+        "type": "coin",
+        "world": {
+          "x": 40,
+          "z": 27.3
+        },
+        "latlon": {
+          "lat": -23.550745,
+          "lon": -46.632908
+        }
+      },
+      {
+        "id": "bi_3",
+        "type": "weapon_part",
+        "world": {
+          "x": 18,
+          "z": -33.3
+        },
+        "latlon": {
+          "lat": -23.550201,
+          "lon": -46.633123
+        }
+      },
+      {
+        "id": "bi_4",
+        "type": "medkit",
+        "world": {
+          "x": 50,
+          "z": 32.1
+        },
+        "latlon": {
+          "lat": -23.550789,
+          "lon": -46.63281
+        }
+      },
+      {
+        "id": "bi_5",
+        "type": "map_piece",
+        "world": {
+          "x": 39.9,
+          "z": 27.6
+        },
+        "latlon": {
+          "lat": -23.550748,
+          "lon": -46.632909
+        }
+      },
+      {
+        "id": "bi_6",
+        "type": "document",
+        "world": {
+          "x": 76.3,
+          "z": 4.7
+        },
+        "latlon": {
+          "lat": -23.550543,
+          "lon": -46.632553
+        }
+      },
+      {
+        "id": "bi_7",
+        "type": "medkit",
+        "world": {
+          "x": 47.9,
+          "z": -21.5
+        },
+        "latlon": {
+          "lat": -23.550307,
+          "lon": -46.63283
+        }
+      },
+      {
+        "id": "bi_8",
+        "type": "medkit",
+        "world": {
+          "x": -50.8,
+          "z": 21.1
+        },
+        "latlon": {
+          "lat": -23.55069,
+          "lon": -46.633798
+        }
+      },
+      {
+        "id": "bi_9",
+        "type": "weapon_part",
+        "world": {
+          "x": 9.3,
+          "z": -37.2
+        },
+        "latlon": {
+          "lat": -23.550166,
+          "lon": -46.633209
+        }
+      },
+      {
+        "id": "bi_10",
+        "type": "ammo_box",
+        "world": {
+          "x": -0.7,
+          "z": -49.7
+        },
+        "latlon": {
+          "lat": -23.550054,
+          "lon": -46.633307
+        }
+      },
+      {
+        "id": "bi_11",
+        "type": "medkit",
+        "world": {
+          "x": 7.6,
+          "z": -12.1
+        },
+        "latlon": {
+          "lat": -23.550391,
+          "lon": -46.633225
+        }
+      },
+      {
+        "id": "bi_gps",
+        "type": "gps_device",
+        "world": {
+          "x": 7.8,
+          "z": -11.5
+        },
+        "latlon": {
+          "lat": -23.550397,
+          "lon": -46.633223
+        }
+      }
+    ],
+    "extract": {
+      "world": {
+        "x": -54,
+        "z": -10.7
+      },
+      "latlon": {
+        "lat": -23.550404,
+        "lon": -46.633829
+      },
+      "gmapsUrl": "https://www.google.com/maps?q=-23.550404,-46.633829"
+    },
+    "npc": {
+      "world": {
+        "x": 3.4,
+        "z": 12.1
+      },
+      "latlon": {
+        "lat": -23.550609,
+        "lon": -46.633267
+      }
+    },
+    "seed": 318605,
+    "savedAt": "2026-05-29T17:34:21.013Z"
+  },
+  {
+    "phase": 2,
+    "theme": "Thriller Urbano",
+    "city": "Rio de Janeiro",
+    "country": "Brasil",
+    "centerLatLon": {
+      "lat": -22.9068,
+      "lon": -43.1729
+    },
+    "centerGmaps": "https://www.google.com/maps?q=-22.9068,-43.1729",
+    "playerSpawn": {
+      "world": {
+        "x": -38.549948048107076,
+        "z": -32.134342320706814
+      },
+      "latlon": {
+        "lat": -22.906511,
+        "lon": -43.173276
+      },
+      "gmapsUrl": "https://www.google.com/maps?q=-22.906511,-43.173276"
+    },
+    "missionItems": [
+      {
+        "id": "mi_0",
+        "type": "pendrive",
+        "world": {
+          "x": 59.1,
+          "z": 7.8
+        },
+        "latlon": {
+          "lat": -22.90687,
+          "lon": -43.172323
+        },
+        "gmapsUrl": "https://www.google.com/maps?q=-22.90687,-43.172323"
+      },
+      {
+        "id": "mi_1",
+        "type": "pendrive",
+        "world": {
+          "x": -20.3,
+          "z": 23.7
+        },
+        "latlon": {
+          "lat": -22.907013,
+          "lon": -43.173098
+        },
+        "gmapsUrl": "https://www.google.com/maps?q=-22.907013,-43.173098"
+      },
+      {
+        "id": "mi_2",
+        "type": "pendrive",
+        "world": {
+          "x": -7.9,
+          "z": -31
+        },
+        "latlon": {
+          "lat": -22.906521,
+          "lon": -43.172977
+        },
+        "gmapsUrl": "https://www.google.com/maps?q=-22.906521,-43.172977"
+      }
+    ],
+    "bonusItems": [
+      {
+        "id": "bi_0",
+        "type": "document",
+        "world": {
+          "x": 47.4,
+          "z": -27.6
+        },
+        "latlon": {
+          "lat": -22.906552,
+          "lon": -43.172437
+        }
+      },
+      {
+        "id": "bi_1",
+        "type": "coin",
+        "world": {
+          "x": 31.1,
+          "z": 1.7
+        },
+        "latlon": {
+          "lat": -22.906815,
+          "lon": -43.172596
+        }
+      },
+      {
+        "id": "bi_2",
+        "type": "document",
+        "world": {
+          "x": -0.5,
+          "z": -12.1
+        },
+        "latlon": {
+          "lat": -22.906691,
+          "lon": -43.172905
+        }
+      },
+      {
+        "id": "bi_3",
+        "type": "ammo_box",
+        "world": {
+          "x": -45.8,
+          "z": 23.1
+        },
+        "latlon": {
+          "lat": -22.907008,
+          "lon": -43.173347
+        }
+      },
+      {
+        "id": "bi_4",
+        "type": "medkit",
+        "world": {
+          "x": -2.5,
+          "z": -24.4
+        },
+        "latlon": {
+          "lat": -22.906581,
+          "lon": -43.172925
+        }
+      },
+      {
+        "id": "bi_5",
+        "type": "map_piece",
+        "world": {
+          "x": 68,
+          "z": 30.8
+        },
+        "latlon": {
+          "lat": -22.907076,
+          "lon": -43.172236
+        }
+      },
+      {
+        "id": "bi_6",
+        "type": "weapon_part",
+        "world": {
+          "x": -42.3,
+          "z": 21.5
+        },
+        "latlon": {
+          "lat": -22.906993,
+          "lon": -43.173312
+        }
+      },
+      {
+        "id": "bi_7",
+        "type": "ammo_box",
+        "world": {
+          "x": -19.5,
+          "z": 21.6
+        },
+        "latlon": {
+          "lat": -22.906994,
+          "lon": -43.173091
+        }
+      },
+      {
+        "id": "bi_8",
+        "type": "map_piece",
+        "world": {
+          "x": -47.2,
+          "z": 0.2
+        },
+        "latlon": {
+          "lat": -22.906802,
+          "lon": -43.17336
+        }
+      },
+      {
+        "id": "bi_9",
+        "type": "weapon_part",
+        "world": {
+          "x": 28.1,
+          "z": 40.9
+        },
+        "latlon": {
+          "lat": -22.907167,
+          "lon": -43.172626
+        }
+      },
+      {
+        "id": "bi_10",
+        "type": "coin",
+        "world": {
+          "x": -14.3,
+          "z": -10.8
+        },
+        "latlon": {
+          "lat": -22.906703,
+          "lon": -43.173039
+        }
+      },
+      {
+        "id": "bi_11",
+        "type": "document",
+        "world": {
+          "x": -15.6,
+          "z": 31.5
+        },
+        "latlon": {
+          "lat": -22.907083,
+          "lon": -43.173052
+        }
+      },
+      {
+        "id": "bi_gps",
+        "type": "gps_device",
+        "world": {
+          "x": -1.3,
+          "z": -12.8
+        },
+        "latlon": {
+          "lat": -22.906685,
+          "lon": -43.172912
+        }
+      }
+    ],
+    "extract": {
+      "world": {
+        "x": -2.1,
+        "z": 50.1
+      },
+      "latlon": {
+        "lat": -22.90725,
+        "lon": -43.17292
+      },
+      "gmapsUrl": "https://www.google.com/maps?q=-22.90725,-43.17292"
+    },
+    "npc": {
+      "world": {
+        "x": 3.9,
+        "z": -2.1
+      },
+      "latlon": {
+        "lat": -22.906782,
+        "lon": -43.172862
+      }
+    },
+    "seed": 161736,
+    "savedAt": "2026-05-29T17:31:43.938Z"
+  },
+  {
+    "phase": 2,
+    "theme": "Thriller Urbano",
+    "city": "Salvador",
+    "country": "Brasil",
+    "centerLatLon": {
+      "lat": -12.9714,
+      "lon": -38.5014
+    },
+    "centerGmaps": "https://www.google.com/maps?q=-12.9714,-38.5014",
+    "playerSpawn": {
+      "world": {
+        "x": 0.37194417079160375,
+        "z": -21.53431972072862
+      },
+      "latlon": {
+        "lat": -12.971207,
+        "lon": -38.501397
+      },
+      "gmapsUrl": "https://www.google.com/maps?q=-12.971207,-38.501397"
+    },
+    "missionItems": [
+      {
+        "id": "mi_0",
+        "type": "pendrive",
+        "world": {
+          "x": -0.3,
+          "z": 22
+        },
+        "latlon": {
+          "lat": -12.971597,
+          "lon": -38.501403
+        },
+        "gmapsUrl": "https://www.google.com/maps?q=-12.971597,-38.501403"
+      },
+      {
+        "id": "mi_1",
+        "type": "pendrive",
+        "world": {
+          "x": 0.3,
+          "z": 43.5
+        },
+        "latlon": {
+          "lat": -12.971791,
+          "lon": -38.501397
+        },
+        "gmapsUrl": "https://www.google.com/maps?q=-12.971791,-38.501397"
+      },
+      {
+        "id": "mi_2",
+        "type": "pendrive",
+        "world": {
+          "x": 0.3,
+          "z": -43.7
+        },
+        "latlon": {
+          "lat": -12.971007,
+          "lon": -38.501398
+        },
+        "gmapsUrl": "https://www.google.com/maps?q=-12.971007,-38.501398"
+      }
+    ],
+    "bonusItems": [
+      {
+        "id": "bi_0",
+        "type": "medkit",
+        "world": {
+          "x": -0.2,
+          "z": -0.2
+        },
+        "latlon": {
+          "lat": -12.971398,
+          "lon": -38.501402
+        }
+      },
+      {
+        "id": "bi_1",
+        "type": "document",
+        "world": {
+          "x": 0.1,
+          "z": 21.6
+        },
+        "latlon": {
+          "lat": -12.971594,
+          "lon": -38.501399
+        }
+      },
+      {
+        "id": "bi_2",
+        "type": "medkit",
+        "world": {
+          "x": -0.5,
+          "z": 65.9
+        },
+        "latlon": {
+          "lat": -12.971992,
+          "lon": -38.501405
+        }
+      },
+      {
+        "id": "bi_3",
+        "type": "coin",
+        "world": {
+          "x": -0.6,
+          "z": 43.5
+        },
+        "latlon": {
+          "lat": -12.971791,
+          "lon": -38.501405
+        }
+      },
+      {
+        "id": "bi_4",
+        "type": "medkit",
+        "world": {
+          "x": 0.2,
+          "z": -22.1
+        },
+        "latlon": {
+          "lat": -12.971201,
+          "lon": -38.501398
+        }
+      },
+      {
+        "id": "bi_5",
+        "type": "map_piece",
+        "world": {
+          "x": -0.3,
+          "z": -22.2
+        },
+        "latlon": {
+          "lat": -12.9712,
+          "lon": -38.501402
+        }
+      },
+      {
+        "id": "bi_6",
+        "type": "document",
+        "world": {
+          "x": 0.1,
+          "z": 0.2
+        },
+        "latlon": {
+          "lat": -12.971402,
+          "lon": -38.501399
+        }
+      },
+      {
+        "id": "bi_7",
+        "type": "ammo_box",
+        "world": {
+          "x": -0.1,
+          "z": 44.2
+        },
+        "latlon": {
+          "lat": -12.971797,
+          "lon": -38.501401
+        }
+      },
+      {
+        "id": "bi_8",
+        "type": "map_piece",
+        "world": {
+          "x": 0.4,
+          "z": 21.7
+        },
+        "latlon": {
+          "lat": -12.971595,
+          "lon": -38.501396
+        }
+      },
+      {
+        "id": "bi_9",
+        "type": "coin",
+        "world": {
+          "x": 0.5,
+          "z": -21.6
+        },
+        "latlon": {
+          "lat": -12.971206,
+          "lon": -38.501395
+        }
+      },
+      {
+        "id": "bi_10",
+        "type": "ammo_box",
+        "world": {
+          "x": -0.2,
+          "z": -44
+        },
+        "latlon": {
+          "lat": -12.971005,
+          "lon": -38.501402
+        }
+      },
+      {
+        "id": "bi_11",
+        "type": "coin",
+        "world": {
+          "x": -0.5,
+          "z": -65.4
+        },
+        "latlon": {
+          "lat": -12.970812,
+          "lon": -38.501405
+        }
+      },
+      {
+        "id": "bi_12",
+        "type": "document",
+        "world": {
+          "x": -0.3,
+          "z": -0.2
+        },
+        "latlon": {
+          "lat": -12.971398,
+          "lon": -38.501403
+        }
+      },
+      {
+        "id": "bi_gps",
+        "type": "gps_device",
+        "world": {
+          "x": 0.4,
+          "z": -21.5
+        },
+        "latlon": {
+          "lat": -12.971206,
+          "lon": -38.501396
+        }
+      }
+    ],
+    "extract": {
+      "world": {
+        "x": 99.9,
+        "z": 21.5
+      },
+      "latlon": {
+        "lat": -12.971593,
+        "lon": -38.500479
+      },
+      "gmapsUrl": "https://www.google.com/maps?q=-12.971593,-38.500479"
+    },
+    "npc": {
+      "world": {
+        "x": -0.5,
+        "z": 0.5
+      },
+      "latlon": {
+        "lat": -12.971405,
+        "lon": -38.501404
+      }
+    },
+    "seed": 136230,
+    "savedAt": "2026-05-29T17:31:26.890Z"
+  },
+  {
+    "phase": 1,
+    "theme": "Pós-Apocalipse",
+    "city": "Londres",
+    "country": "UK",
+    "centerLatLon": {
+      "lat": 51.5074,
+      "lon": -0.1278
+    },
+    "centerGmaps": "https://www.google.com/maps?q=51.5074,-0.1278",
+    "playerSpawn": {
+      "world": {
+        "x": -40.63731083721863,
+        "z": -28.048738113925246
+      },
+      "latlon": {
+        "lat": 51.507652,
+        "lon": -0.128387
+      },
+      "gmapsUrl": "https://www.google.com/maps?q=51.507652,-0.128387"
+    },
+    "missionItems": [
+      {
+        "id": "mi_0",
+        "type": "fuel",
+        "world": {
+          "x": 42.3,
+          "z": 7.9
+        },
+        "latlon": {
+          "lat": 51.507329,
+          "lon": -0.12719
+        },
+        "gmapsUrl": "https://www.google.com/maps?q=51.507329,-0.12719"
+      },
+      {
+        "id": "mi_1",
+        "type": "fuel",
+        "world": {
+          "x": -47.3,
+          "z": -1.6
+        },
+        "latlon": {
+          "lat": 51.507414,
+          "lon": -0.128483
+        },
+        "gmapsUrl": "https://www.google.com/maps?q=51.507414,-0.128483"
+      }
+    ],
+    "bonusItems": [
+      {
+        "id": "bi_0",
+        "type": "ammo_box",
+        "world": {
+          "x": -10.7,
+          "z": -17.6
+        },
+        "latlon": {
+          "lat": 51.507559,
+          "lon": -0.127954
+        }
+      },
+      {
+        "id": "bi_1",
+        "type": "weapon_part",
+        "world": {
+          "x": -42.6,
+          "z": -9.9
+        },
+        "latlon": {
+          "lat": 51.507489,
+          "lon": -0.128415
+        }
+      },
+      {
+        "id": "bi_2",
+        "type": "map_piece",
+        "world": {
+          "x": -23.1,
+          "z": 44.1
+        },
+        "latlon": {
+          "lat": 51.507004,
+          "lon": -0.128133
+        }
+      },
+      {
+        "id": "bi_3",
+        "type": "medkit",
+        "world": {
+          "x": -36.1,
+          "z": 46.3
+        },
+        "latlon": {
+          "lat": 51.506984,
+          "lon": -0.128321
+        }
+      },
+      {
+        "id": "bi_4",
+        "type": "document",
+        "world": {
+          "x": 8.2,
+          "z": -5.5
+        },
+        "latlon": {
+          "lat": 51.50745,
+          "lon": -0.127681
+        }
+      },
+      {
+        "id": "bi_5",
+        "type": "ammo_box",
+        "world": {
+          "x": -10.8,
+          "z": -18.1
+        },
+        "latlon": {
+          "lat": 51.507563,
+          "lon": -0.127956
+        }
+      },
+      {
+        "id": "bi_6",
+        "type": "map_piece",
+        "world": {
+          "x": -29,
+          "z": -18.1
+        },
+        "latlon": {
+          "lat": 51.507563,
+          "lon": -0.128219
+        }
+      },
+      {
+        "id": "bi_7",
+        "type": "medkit",
+        "world": {
+          "x": -17.5,
+          "z": 31.7
+        },
+        "latlon": {
+          "lat": 51.507115,
+          "lon": -0.128053
+        }
+      },
+      {
+        "id": "bi_8",
+        "type": "medkit",
+        "world": {
+          "x": 3.7,
+          "z": 20.1
+        },
+        "latlon": {
+          "lat": 51.50722,
+          "lon": -0.127747
+        }
+      },
+      {
+        "id": "bi_9",
+        "type": "document",
+        "world": {
+          "x": -49,
+          "z": 29.4
+        },
+        "latlon": {
+          "lat": 51.507135,
+          "lon": -0.128507
+        }
+      },
+      {
+        "id": "bi_gps",
+        "type": "gps_device",
+        "world": {
+          "x": 16.4,
+          "z": -1.5
+        },
+        "latlon": {
+          "lat": 51.507414,
+          "lon": -0.127564
+        }
+      }
+    ],
+    "extract": {
+      "world": {
+        "x": -53.9,
+        "z": -21.5
+      },
+      "latlon": {
+        "lat": 51.507594,
+        "lon": -0.128578
+      },
+      "gmapsUrl": "https://www.google.com/maps?q=51.507594,-0.128578"
+    },
+    "npc": {
+      "world": {
+        "x": 5.2,
+        "z": 6.9
+      },
+      "latlon": {
+        "lat": 51.507338,
+        "lon": -0.127725
+      }
+    },
+    "seed": 965900,
+    "savedAt": "2026-05-29T17:28:28.416Z"
+  }
+]

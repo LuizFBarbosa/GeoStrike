@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+<title>GeoStrike — O Mundo é o Mapa</title>
+<link rel="icon" href="data:,"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="stylesheet" href="css/style.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/PointerLockControls.js"></script>
+</head>
+<body>
+<!-- Minimap outside #gc so it's not affected by canvas CSS rule -->
+<div id="minimap-wrap">
+  <canvas id="minimap-canvas" width="360" height="380"></canvas>
+  <div id="minimap-label">MAPA TÁTICO</div>
+</div>
+
+<div id="gc">
+
+  <!-- FX overlays -->
+  <div id="dmg-overlay"></div>
+  <div id="heal-overlay"></div>
+  <div id="flash-overlay"></div>
+  <!-- Blind mode overlays -->
+  <div id="blind-overlay"></div>
+  <div id="lightning-overlay"></div>
+  <div id="blind-compass-hud"></div>
+
+  <!-- ══════════ MAIN MENU ══════════ -->
+  <div id="menu-screen" class="screen">
+    <div class="menu-inner">
+      <div class="menu-logo">
+        <div class="logo-icon">🌍</div>
+        <h1>GEO<span>STRIKE</span></h1>
+        <p>O Mundo Real é o Seu Campo de Batalha</p>
+      </div>
+      <div class="menu-description">
+        <p>Cada fase sorteia um lugar <strong>real</strong> do mundo.<br/>
+        Ruas, prédios e pontos de referência reais.<br/>
+        Descubra onde você está e ganhe poderes especiais.</p>
+      </div>
+      <button id="btn-start" class="btn-primary">🎮 INICIAR MISSÃO</button>
+      <div class="menu-blind-toggle">
+        <label class="blind-toggle-label">
+          <input type="checkbox" id="blind-mode-toggle">
+          <span class="blind-toggle-box"></span>
+          <span>🌑 MODO CEGO — Fase final no escuro com guia por voz</span>
+        </label>
+        <p class="blind-toggle-desc">Ao coletar o último item da missão, a tela escurece. Apenas o minimap e relâmpagos ocasionais iluminam o mundo. Uma voz guia você até a extração.</p>
+      </div>
+      <div class="menu-hints">
+        <span>WASD mover</span><span>Mouse mirar</span><span>Click atirar</span>
+        <span>E interagir</span><span>R recarregar</span><span>F habilidade</span>
+        <span>Tab mapa</span><span>G adivinhar local</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ LOADING ══════════ -->
+  <div id="loading-screen" class="screen hidden">
+    <div class="loading-inner">
+      <div class="loading-globe">🌍</div>
+      <h2 id="loading-title">Carregando mapa real...</h2>
+      <p id="loading-sub">Buscando dados do OpenStreetMap</p>
+      <div class="loading-bar-wrap"><div id="loading-bar"></div></div>
+      <div id="loading-steps">
+        <div class="ls" id="ls1">⬜ Localizando coordenadas</div>
+        <div class="ls" id="ls2">⬜ Baixando ruas e prédios</div>
+        <div class="ls" id="ls3">⬜ Gerando geometria 3D</div>
+        <div class="ls" id="ls4">⬜ Posicionando inimigos</div>
+        <div class="ls" id="ls5">⬜ Preparando missão</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ BRIEFING ══════════ -->
+  <div id="briefing-screen" class="screen hidden">
+    <div class="briefing-inner">
+      <div id="brief-theme-badge"></div>
+      <h2 id="brief-title"></h2>
+      <p id="brief-story"></p>
+      <div id="brief-goal-box">
+        <div class="brief-goal-label">🎯 OBJETIVO</div>
+        <div id="brief-goal"></div>
+      </div>
+      <div id="brief-location-clue">
+        <div class="clue-label">📍 DICA DE LOCALIZAÇÃO</div>
+        <div id="brief-clue"></div>
+      </div>
+      <div id="brief-enemies-preview"></div>
+      <div class="menu-blind-toggle" style="margin-bottom:14px">
+        <label class="blind-toggle-label">
+          <input type="checkbox" id="blind-mode-phase-toggle">
+          <span class="blind-toggle-box"></span>
+          <span>🌑 MODO CEGO nesta fase</span>
+        </label>
+        <p class="blind-toggle-desc">Ao coletar o último item a tela escurece. Guia por voz e minimapa até a extração.</p>
+      </div>
+      <button id="btn-deploy" class="btn-primary">⚔️ INICIAR MISSÃO</button>
+    </div>
+  </div>
+
+  <!-- ══════════ HUD ══════════ -->
+  <div id="hud" class="hidden">
+
+    <!-- Top bar -->
+    <div id="top-bar">
+      <div id="phase-badge"></div>
+      <div id="top-center">
+        <div id="objective-text">Colete os itens</div>
+        <div id="progress-wrap">
+          <div id="progress-fill"></div>
+          <span id="progress-label">0/0</span>
+        </div>
+      </div>
+      <div id="top-right"><span style="font-family:var(--fm);font-size:.8rem;color:#ffd700;margin-right:8px;">⭐ <span id="score-display">0</span></span>
+        <div id="compass">N</div>
+        <div id="coords-display"></div>
+      </div>
+    </div>
+
+    <!-- Left panel: vitals -->
+    <div id="vitals">
+      <div id="hp-wrap">
+        <div class="vital-label">❤️ VIDA</div>
+        <div class="bar-bg"><div id="hp-bar"></div></div>
+        <div id="hp-num">100</div>
+      </div>
+      <div id="ammo-wrap">
+        <span id="ammo-cur">30</span><span class="ammo-slash">/</span><span id="ammo-max">30</span>
+        <div id="ammo-label">MUNIÇÃO</div>
+        <div id="reload-bar-bg" class="hidden"><div id="reload-bar"></div></div>
+      </div>
+      <div id="ability-wrap">
+        <div id="ability-btn-icon">❓</div>
+        <div id="ability-bar-bg"><div id="ability-bar" style="width:100%"></div></div>
+        <div id="ability-name">—</div>
+      </div>
+    </div>
+
+
+
+    <!-- Inventory / collected items -->
+    <div id="inventory">
+      <div class="inv-label">🎒 COLETADOS</div>
+      <div id="inv-slots"></div>
+    </div>
+
+    <!-- Kill / event feed -->
+    <div id="event-feed"></div>
+
+    <!-- Crosshair -->
+    <div id="xhair">
+      <div class="xh-h"></div>
+      <div class="xh-v"></div>
+      <div class="xh-dot"></div>
+    </div>
+
+    <!-- Hit marker -->
+    <div id="hitmark" class="hidden">✕</div>
+
+    <!-- Interaction prompt -->
+    <div id="interact-prompt" class="hidden">
+      <span class="key-badge">E</span> <span id="interact-text">Interagir</span>
+    </div>
+
+    <!-- Location guess button -->
+    <div id="guess-btn-wrap">
+    </div>
+
+    <!-- Click to lock hint -->
+    <div id="lock-hint" style="display:none">
+      <div class="lock-hint-inner">🖱️ Clique para capturar o mouse</div>
+    </div>
+
+    <!-- Conn -->
+    <div id="conn-status">🟢 Online</div>
+  </div>
+
+  <!-- ══════════ NPC DIALOG ══════════ -->
+  <div id="npc-dialog" class="hidden">
+    <div class="npc-inner">
+      <div class="npc-avatar" id="npc-avatar">👤</div>
+      <div class="npc-bubble">
+        <div class="npc-name" id="npc-name">Desconhecido</div>
+        <div class="npc-text" id="npc-text"></div>
+        <button id="npc-close" class="btn-small">Entendido ✓</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ LOCATION GUESS ══════════ -->
+
+
+  <!-- ══════════ PHASE COMPLETE ══════════ -->
+  <div id="phase-complete" class="screen-overlay hidden">
+    <div class="complete-inner">
+      <div class="complete-emoji" id="complete-emoji">🏆</div>
+      <h2 id="complete-title">MISSÃO COMPLETA!</h2>
+      <div id="complete-stats"></div>
+      <div id="complete-location"></div>
+      <div id="bonus-power-display" class="hidden"></div>
+      <button id="btn-next-phase" class="btn-primary">➡️ PRÓXIMA FASE</button>
+    </div>
+  </div>
+
+  <!-- ══════════ GAME OVER ══════════ -->
+  <div id="gameover-screen" class="screen-overlay hidden">
+    <div class="go-inner">
+      <div class="go-emoji">💀</div>
+      <h2>VOCÊ MORREU</h2>
+      <p id="go-phase">Fase 1</p>
+      <div id="go-stats"></div>
+      <button id="btn-retry" class="btn-primary">🔄 Tentar Novamente</button>
+      <button id="btn-menu" class="btn-secondary">🏠 Menu</button>
+    </div>
+  </div>
+
+</div><!-- /gc -->
+<script src="js/game.js"></script>
+</body>
+</html>
