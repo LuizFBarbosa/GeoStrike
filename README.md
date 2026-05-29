@@ -70,7 +70,7 @@ Ativa-se ao coletar o último item da missão:
 - **Escolha por fase** — toggle no briefing antes de cada missão
 
 ### 🏆 Recordes
-- Top 10 recordes salvos em `localStorage` (persiste entre sessões)
+- Top 3 recordes salvos em `localStorage` (persiste entre sessões)
 - Exibido na tela de conclusão com medalhas 🥇🥈🥉
 
 ### 📋 Log de Fase
